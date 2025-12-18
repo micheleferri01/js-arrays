@@ -31,7 +31,13 @@ console.table(reversedTeachersSolution3);
 
 // 2. Crea un nuovo array chiamato 'longNames' che contenga solo gli insegnanti
 // con un nome di lunghezza maggiore o uguale a 5 caratteri
-const longNames = null;
+const longNames = [];
+for(let i = 0; i < teachers.length; i++){
+  if(teachers[i].length >= 5){
+    longNames.push(teachers[i]);
+  }
+}
+console.table(longNames);
 
 // 3. Rimuovi 'Ed' dall'array teachers
 
