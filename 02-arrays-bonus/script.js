@@ -58,4 +58,12 @@ for(let i = 0; i < teachers.length; i++){
 console.log('Fabio è prensente nella lista:', isFabioPresent);
 
 // 5. Unisci tutti gli insegnanti nell'array teachers in una stringa  separata da virgole e salvala nella variabile teachersString
-const teachersString = null;
+const teachersString = teachers.join(", ");
+console.log('Lista insegnanti:',teachersString);
+
+// !Punto 5 soluzione 2
+let teachersString2 = "";
+for(let i = 0; i < teachers.length; i++){
+  teachersString2 += (teachers[i] + ", ");
+}
+console.log("Insegnati:",teachersString2);
