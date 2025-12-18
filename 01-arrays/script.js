@@ -20,12 +20,12 @@ console.table(teachers);
 // 3. Rimuovi l'ultimo insegnante dall'array e salvalo nella variabile lastTeacher qui sotto
 const lastTeacher = teachers.pop();
 console.table(teachers);
-console.log('Ultimo insegnate:',lastTeacher);
+console.log('Ultimo insegnate:', lastTeacher);
 
 // 4. Rimuovi il primo insegnante dall'array e salvalo nella variabile firstTeacher qui sotto
 const firstTeacher = teachers.shift();
 console.table(teachers);
-console.log('Primo insegnante:',firstTeacher);
+console.log('Primo insegnante:', firstTeacher);
 
 // 5. Aggiungi un insegnante di nome 'Vanessa' alla fine dell'array teachers
 teachers.push('Vanessa');
@@ -37,7 +37,13 @@ console.table(teachers);
 
 // 7. Trova l'indice dell'insegnante 'Lewis' nell'array teachers
 // e salvalo nella variabile lewisIndex
-const lewisIndex = null;
+let lewisIndex = 0;
+for (let i = 0; i < teachers.length; i++) {
+  if (teachers[i] === 'Lewis') {
+    lewisIndex = i;
+    console.log("L'index di Lewis è:",lewisIndex);
+  }
+}
 
 // 8. Verifica se l'array teachers è vuoto
 // e salva il risultato nella variabile isTeachersEmpty
