@@ -40,11 +40,8 @@ for(let i = 0; i < teachers.length; i++){
 console.table(longNames);
 
 // 3. Rimuovi 'Ed' dall'array teachers
-for(let i = 0; i < teachers.length; i++){
-  if(teachers[i] === 'Ed'){
-    teachers.splice(i,1);
-  }
-}
+const edIndex = teachers.indexOf('Ed');
+teachers.splice(edIndex,1);
 console.table(teachers);
 
 // 4. Verifica se 'Fabio' è presente nell'array teachers
@@ -64,6 +61,13 @@ console.log('Lista insegnanti:',teachersString);
 // !Punto 5 soluzione 2
 let teachersString2 = "";
 for(let i = 0; i < teachers.length; i++){
-  teachersString2 += (teachers[i] + ", ");
+  teachersString2 += teachers[i];
+  if (i !== teachers.length - 1){
+    teachersString2 += ", ";
+  }
 }
 console.log("Insegnati:",teachersString2);
+
+// !Punto 5 soluzione 3
+const teachersString3 = teachers.toString();
+console.log('Insegnanti:',teachersString3);
